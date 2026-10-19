@@ -111,13 +111,21 @@ HTML 문서 자체는 정적이기 때문에 화면이 스스로 움직이지 �
 가장 표준적이고 권장되는 정의 방법은 addEventListener() 메서드를 사용하는 것입니다.
 
 기본 문법
+
 javascript
+₩₩₩
 요소.addEventListener('이벤트타입', 실행할함수);
+₩₩₩
 
 실제 구현 예시
-html <button id="myBtn">클릭해 보세요</button>
+
+html 
+₩₩₩
+<button id="myBtn">클릭해 보세요</button>
+₩₩₩
 
 javascript
+₩₩₩
 // 1. 요소를 먼저 가져옵니다.
 const button = document.querySelector('#myBtn');
 
@@ -125,7 +133,7 @@ const button = document.querySelector('#myBtn');
 button.addEventListener('click', function() {
   alert('버튼이 클릭되었습니다!');
 });
-                                                    
+₩₩₩                                                    
   
 
 ### EventListener(이벤트 리스너) 응용
@@ -135,17 +143,18 @@ button.addEventListener('click', function() {
 
 이벤트가 발생하면 브라우저는 발생한 사건의 상세 정보를 담은 event 객체를 함수에 전달합니다.
 
+₩₩₩
 javascript
 button.addEventListener('click', (event) => {
   console.log(event.target); // 클릭된 HTML 요소 자체를 가리킴 (<button>...</button>)
   console.log(event.clientX, event.clientY); // 클릭된 화면의 X, Y 좌표
 });
-
+₩₩₩
 
 ② 이벤트 기본 동작 막기 (preventDefault)
 
 <a> 태그를 누르면 페이지가 이동하고, <form>을 제출하면 새로고침이 됩니다. 이런 브라우저의 기본 작동을 막고 자바스크립트로 따로 제어할 때 응용합니다.
-
+₩₩₩
 javascript
 const link = document.querySelector('a');
 
@@ -153,12 +162,12 @@ link.addEventListener('click', (event) => {
   event.preventDefault(); // 링크가 작동해서 페이지가 이동하는 것을 막음
   console.log('페이지 이동 대신 이 문구가 출력됩니다.');
 });
-
+₩₩₩
 
 ③ 이벤트 제거하기 (removeEventListener)
 
 특정 조건이 만족된 후 더 이상 이벤트를 감지할 필요가 없을 때 리스너를 삭제하여 메모리를 절약합니다. (※ 제거할 때는 익명 함수가 아닌 이름을 가진 함수를 연결해야 합니다.)
-
+₩₩₩
 javascript
 function handleClick() {
   console.log('딱 한 번만 실행됩니다.');
@@ -168,7 +177,7 @@ function handleClick() {
 }
 
 button.addEventListener('click', handleClick);
-
+₩₩₩
 
 ## 마우스 감지란?
 마우스 감지 사용
@@ -200,7 +209,7 @@ button.addEventListener('click', handleClick);
 -1. 사례 코드: 화살표 함수를 이용한 마우스 감지 구현
 
 화살표 함수를 사용하여 화면에서 사용자의 마우스 좌표 위치를 실시간으로 감지하고 출력하는 간단한 자바스크립트 예제 코드입니다.
-
+₩₩₩
 javascript
 // 마우스 위치를 화면에 표시할 HTML 요소가 있다고 가정합니다.
 const logElement = document.querySelector('#mouse-log');
@@ -212,23 +221,25 @@ window.addEventListener('mousemove', (event) => {
   
   logElement.textContent = `마우스 위치 - X: ${x}px, Y: ${y}px`;
 });
+₩₩₩
 
 -2. 사례 코드 2: 커스텀 마우스 포인터를 만드는 예제 코드
 
 기본 마우스 커서를 숨기고, 마우스를 움직일 때마다 내가 만든 디자인(동그라미 등)이 커서를 부드럽게 따라다니도록 만드는 기능
 
-
+₩₩₩
 HTML
 
 마우스 커서 역할을 할 HTML 요소를 하나 생성합니다.
 
 html <div class="custom-cursor"></div>
-
+₩₩₩
 
 CSS
 
 기본 마우스 포인터를 없애고(cursor: none), 커스터마이징할 커서의 크기와 색상을 지정합니다. 마우스 움직임에 따라 실시간으로 위치를 바꿀 수 있도록 position: fixed를 사용합니다.
 
+₩₩₩
 css
 body {
   cursor: none; /* 기본 마우스 포인터 숨기기 */
@@ -246,13 +257,13 @@ body {
   pointer-events: none; /* 커서가 클릭 이벤트를 방해하지 않도록 설정 */
   transition: transform 0.1s ease-out; /* 부드러운 효과 추가 */
 }
-
+₩₩₩
 
 JavaScript (화살표 함수 사용)
 
 mousemove 이벤트를 감지하여 사용자의 마우스 좌표(clientX, clientY) 값으로 커서 요소의 위치를 실시간 업데이트
 
-
+₩₩₩
 javascript
 const cursor = document.querySelector('.custom-cursor');
 
@@ -261,7 +272,7 @@ window.addEventListener('mousemove', (e) => {
   cursor.style.left = `${e.clientX}px`;
   cursor.style.top = `${e.clientY}px`;
 });
-
+₩₩₩
  
 ## 📚 참고 자료 (References)
 

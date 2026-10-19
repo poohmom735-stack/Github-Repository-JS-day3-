@@ -115,8 +115,7 @@ javascript
 요소.addEventListener('이벤트타입', 실행할함수);
 
 실제 구현 예시
-html
-<button id="myBtn">클릭해 보세요</button>
+html <button id="myBtn">클릭해 보세요</button>
 
 javascript
 // 1. 요소를 먼저 가져옵니다.
@@ -146,6 +145,7 @@ button.addEventListener('click', (event) => {
 ② 이벤트 기본 동작 막기 (preventDefault)
 
 <a> 태그를 누르면 페이지가 이동하고, <form>을 제출하면 새로고침이 됩니다. 이런 브라우저의 기본 작동을 막고 자바스크립트로 따로 제어할 때 응용합니다.
+
 javascript
 const link = document.querySelector('a');
 
@@ -222,8 +222,7 @@ HTML
 
 마우스 커서 역할을 할 HTML 요소를 하나 생성합니다.
 
-html
-<div class="custom-cursor"></div>
+html <div class="custom-cursor"></div>
 
 
 CSS

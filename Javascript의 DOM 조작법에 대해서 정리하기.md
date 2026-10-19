@@ -1,4 +1,4 @@
-<img width="485" height="507" alt="image" src="https://github.com/user-attachments/assets/dae7f925-6b4f-4742-98e2-13649a4e5a06" /># 🏷️ [Javascript의 DOM 조작법] 개념 정리 
+# 🏷️ [Javascript의 DOM 조작법] 개념 정리 
 
 - 학습일 : 2026-10-19  
 

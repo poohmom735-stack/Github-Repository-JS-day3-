@@ -253,6 +253,8 @@ JavaScript (화살표 함수 사용)
 
 mousemove 이벤트를 감지하여 사용자의 마우스 좌표(clientX, clientY) 값으로 커서 요소의 위치를 실시간 업데이트
 
+
+javascript
 const cursor = document.querySelector('.custom-cursor');
 
 // 화살표 함수를 사용하여 마우스 움직임 감지
